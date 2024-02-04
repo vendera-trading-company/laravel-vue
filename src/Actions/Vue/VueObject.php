@@ -80,6 +80,10 @@ class VueObject extends Action
             return $object;
         }
 
+        if (is_array($object)) {
+            return $object;
+        }
+
         if (method_exists($object, 'vue')) {
             return $object->vue();
         }
